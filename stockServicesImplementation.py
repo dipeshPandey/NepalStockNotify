@@ -4,10 +4,10 @@ import stockServicesClass as ssc
 from stockServicesClass import NepalStockServices
 
 
-if(ssc.getMarketStatus()=="\nMarket Open\n"):
+if(ssc.getMarketStatus()=="\nMarket Close\n"):
     wb.balloon_tip("Market Closed","Come Back when market is Opened ",5)
     sys.exit()
-elif(ssc.getMarketStatus()=="\nMarket Close\n"):
+elif(ssc.getMarketStatus()=="\nMarket Open\n"):
     url_code="0"
     while(url_code=="0"):
         code = raw_input("Plese enter the Code eg:[scb,adbl,nlic]\n")
