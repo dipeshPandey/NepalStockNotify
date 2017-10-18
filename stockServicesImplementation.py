@@ -5,7 +5,7 @@ from stockServicesClass import NepalStockServices
 
 
 if(ssc.getMarketStatus()=="\nMarket Close\n"):
-    wb.balloon_tip("Market Closed","Come Back when market is Opened ",5)
+    wb.balloon_tip("Market Closed","Come Back 11:00-15:00 ",5)
     sys.exit()
 elif(ssc.getMarketStatus()=="\nMarket Open\n"):
     url_code="0"
