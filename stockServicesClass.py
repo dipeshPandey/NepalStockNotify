@@ -11,9 +11,11 @@ class NepalStockServices:
 def getMarketStatus():
     page = requests.get("http://www.nepalstock.com/")
     soup = BeautifulSoup(page.content, 'html.parser')
-    market = soup.find_all('div', attrs={'class':'container red-text market-status'})
+    market = soup.find_all('div', attrs={'id':'top-notice-bar'})
+##    print market[0].get_text()
     marketStatus = market[0].get_text()
     return marketStatus
+##    return "a"
 
 def getUrlCode(stockCode):
     ad = loadAllStockCode();
