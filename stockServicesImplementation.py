@@ -5,7 +5,7 @@ from stockServicesClass import NepalStockServices
 
 
 if(ssc.getMarketStatus()=="\nMarket Close\n"):
-    wb.balloon_tip("Market Closed","Come Back 11:00-15:00 ",5)
+    wb.balloon_tip("Market Closed","Come Back 11:00 - 15:00 ",5)
     sys.exit()
 elif(ssc.getMarketStatus()=="\nMarket Open\n"):
     url_code="0"
@@ -14,6 +14,8 @@ elif(ssc.getMarketStatus()=="\nMarket Open\n"):
         url_code = ssc.getUrlCode(code)
     recentPrice = ssc.getRecentPrice(url_code)
     print "The Recent Price Of "+code.upper()+" is "+recentPrice
+    print "-------Market Depth--------"
+    print "Buy: "+ssc.getMarketDepthBuyFirst(code.upper(),url_code)+ "  Sell :"+ssc.getMarketDepthSellFirst(code.upper(),url_code);
     yn = "a"
     while(yn.upper()!="Y" and yn.upper()!="N"):
         yn=raw_input("Do you want to create ALERT of Stocks \n [Y]es or [N]o only \n")
