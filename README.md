@@ -5,4 +5,4 @@ and create a custom Alert when the stock price changes and meet the desired pric
 The program is developed using python 2.7 
 
 Contribute to my project and add new features, i will verify and merge the changes.
-
+Run stockServicesImplementation.py file and give it a try .
